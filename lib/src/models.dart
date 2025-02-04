@@ -379,6 +379,7 @@ class StartStreamTranscriptionRequest extends TranscribeStreamingRequest {
               vocabularyFilterMethod!.value,
         if (showSpeakerLabel != null)
           'x-amzn-transcribe-show-speaker-label': showSpeakerLabel!.toString(),
+        'x-amzn-transcribe-max-speaker-labels': '5',
         if (enableChannelIdentification != null)
           'x-amzn-transcribe-enable-channel-identification':
               enableChannelIdentification!.toString(),
