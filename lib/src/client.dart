@@ -160,6 +160,7 @@ final class TranscribeStreamingClient {
                 eventStreamMessage.getHeaderValue(':message-type');
 
             if (messageType == 'event') {
+              print(utf8.decode(eventStreamMessage.payload));
               eventStreamMessageController.sink.add(eventStreamMessage);
             } else if (messageType == 'exception') {
               throw TranscribeStreamingServiceException.createFromResponse(
